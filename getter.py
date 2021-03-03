@@ -61,6 +61,7 @@ async def on_ready():
                     embed_text.colour = 0x3498db
                     embed_text.set_author(name=f"New {title} chapter!")
                     embed_text.set_thumbnail(url=image_link)
+                    await channel.send("<@&772429737724346370>")
                     await channel.send(embed=embed_text)
 
                     print(f"New release for {title}!")
