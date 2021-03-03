@@ -24,7 +24,7 @@ bot = commands.Bot(command_prefix='!!', intents=discord.Intents.all())
 @bot.event
 async def on_ready():
     now = datetime.datetime.now()
-    now = now.strftime("%M-%d-%Y %H:%M:%S")
+    now = now.strftime("%m-%d-%Y %H:%M:%S")
     print(f"Bot started @ {now}")
 
 @bot.command()

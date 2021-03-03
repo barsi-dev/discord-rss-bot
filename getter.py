@@ -37,7 +37,7 @@ async def on_ready():
         cursor = db.cursor()
         cursor.execute("SELECT link, latest FROM feeds")
         now = datetime.datetime.now()
-        now = now.strftime("%M-%d-%Y %H:%M:%S")
+        now = now.strftime("%m-%d-%Y %H:%M:%S")
         print(f"[{i}] {now}")
         i +=1
 
