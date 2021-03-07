@@ -18,7 +18,7 @@ db = mysql.connector.connect(
   database=os.getenv("DB")
 )
 
-
+bot = commands.Bot(command_prefix='rss.', intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():
