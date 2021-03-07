@@ -28,7 +28,8 @@ async def on_ready():
     """Called when the client is done preparing the data received from Discord."""
     print("Bot is ready")
 
-    channel = bot.get_channel(799886736804413502)
+    channel = bot.get_channel(int(os.getenv("CHANNEL")))
+    print(channel)
     i = 1
     cursor = db.cursor()
 

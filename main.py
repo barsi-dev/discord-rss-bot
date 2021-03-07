@@ -19,7 +19,7 @@ db = mysql.connector.connect(
 )
 
 # Intents are new in version 1.5.
-bot = commands.Bot(command_prefix='!!', intents=discord.Intents.all())
+bot = commands.Bot(command_prefix='--', intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():
@@ -99,17 +99,15 @@ async def list(ctx):
     
     await ctx.send(f"```{list}```")
         
-
-
     cursor.close()
 
+@bot.command()
+async def janina(ctx):
+    await ctx.send("> I love you Enmanoel Larong\n> -Janina Soco")
 
-@bot.event
-async def on_message(message):
-    """Called when a Message is created and sent."""
-    if message.author.bot:
-        return
-    await bot.process_commands(message)
+
+
+
 
 bot.run(os.getenv('TOKEN'))
 
