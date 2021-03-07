@@ -19,7 +19,7 @@ db = mysql.connector.connect(
 )
 
 # Intents are new in version 1.5.
-bot = commands.Bot(command_prefix='--', intents=discord.Intents.all())
+bot = commands.Bot(command_prefix='!!', intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():
@@ -70,19 +70,6 @@ async def rss(ctx, *, arg):
         await ctx.send(f"`Not a valid RSS link!`")
     else:
         await ctx.send(f"`Successfuly added {added} to list!`")
-
-# @bot.command()
-# async def help(ctx):
-#     msg = f"""```
-# !!rss <link>
-#     - Asks for an RSS Link
-#     - Watches an RSS link for updates
-# !!add <name>
-#     - Asks for a name of an manga/manhwa
-#     - Checks Mangasee123 if manga/manhwa exists
-#     ```"""
-
-    await ctx.send(msg)
 
 @bot.command()
 async def list(ctx):
