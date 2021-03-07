@@ -19,7 +19,7 @@ db = mysql.connector.connect(
 )
 
 # Intents are new in version 1.5.
-bot = commands.Bot(command_prefix='!!', intents=discord.Intents.all())
+bot = commands.Bot(command_prefix='--', intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():
